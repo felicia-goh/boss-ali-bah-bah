@@ -8,8 +8,8 @@
 }
 
 .card-product-home img {
-  height: 100%;
-  width: 120px;
+  height: 88px;
+  width: 88px;
   object-fit: cover;
 }
 
@@ -27,10 +27,15 @@
 }
 
 .card-product-home .card-product-infos {
+  width: 100%;
   padding: 16px;
+}
+
+.card-product-home .card-line {
+  height: 2px;
+  background-color:$green;
 }
 
 .img_preview {
   max-height: 150px;
 }
-
