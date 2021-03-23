@@ -8,12 +8,12 @@
       <% workdays.each do |workday| %>
         <div>
           <%= link_to "#{edit_workday_path(workday)}?#{date}" do %>
-          <% if workday.on_rest %>
-            <div class="calendar-circle date" style="background-color: rgb(254, 214, 72, 0.4);"><%= date.day %></div>
-          <% elsif workday.on_mc %>
-            <div class="calendar-circle date" style="background-color: rgba(241, 98, 81, 0.4);"><%= date.day %></div>
-          <% else %>
-            <div class="d-flex calendar-circle date" style="background-color: rgba(27, 187, 164, 0.4);"><%= date.day %></div>
+            <% if workday.on_rest %>
+              <div class="calendar-highlight highlight-yellow"><%= date.day %></div>
+            <% elsif workday.on_mc %>
+              <div class="calendar-highlight hightlight-red"><%= date.day %></div>
+            <% else %>
+              <div class="calendar-highlight highlight-green"><%= date.day %></div>
             <% end %>
           <% end %>
         </div>
@@ -23,20 +23,20 @@
   <!-- legend -->
   <div class="d-flex justify-content-around">
     <div class="d-flex align-items-center">
-      <div class="calendar-circle-small m-0" style="background-color: rgba(27, 187, 164, 0.4);"></div>
+      <div class="calendar-highlight-small highlight-green m-0"></div>
       <p class="my-0 mx-1">Work day</p>
     </div>
     <div class="d-flex align-items-center">
-      <div class="calendar-circle-small m-0" style="background-color: rgb(254, 214, 72, 0.4);"></div>
+      <div class="calendar-highlight-small highlight-yellow m-0"></div>
       <p class="my-0 mx-1">Rest day</p>
     </div>
     <div class="d-flex align-items-center">
-      <div class="calendar-circle-small m-0" style="background-color: rgba(241, 98, 81, 0.4);"></div>
+      <div class="calendar-highlight-small highlight-red m-0"></div>
       <p class="my-0 mx-1">On MC</p>
     </div>
   </div>
 
-  <div class="my-3 py-3 bg-white" style="text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+  <div class="my-3 py-3 container-white-salary">
     <h5>Salary</h5>
 
     <% start_date = params[:start_date] %>
