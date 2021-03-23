@@ -6,61 +6,6 @@
   align-items: center;
 }
 
-.square{
-  height: 100%;
-  width: 120px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-.parent{
-  position:relative;
-}
-
-.child{
- margin-top: 60px;
- margin-left: 5%;
-
-}
-
-.move-down{
-  padding-top: 20px;
-
-}
-
-.btn-transparent{
-  background-color: transparent;
-  border: none;
-}
-.child-second{
- margin-top: 20px;
-}
-
-.text-blue{
-  color:#262737;
-}
-
-.left{
-  float: left;
-}
-
-
-.badge-customize {
-  position: absolute;
-  padding: 5px 10px;
-  border-radius: 50%;
-  color: white;
-  left:-2px;
-  top:10px;
-}
-
-.badge-map {
-  position: relative;
-  padding: 5px 10px;
-  color: white;
-  //right:2px;
-  top:-3px;
-}
-
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
@@ -79,23 +24,22 @@
   padding: 16px;
 }
 
-
-.tales {
-  width: 100%;
+.btn-transparent{
+  background-color: transparent;
+  border: none;
 }
 
+.badge-map {
+  position: relative;
+  padding: 5px 10px;
+  color: white;
+  //right:2px;
+  top:-3px;
+}
 
 .btn-green{
   background-color:#2ab59b;
   color: #black;
-}
-
-.round{
-  border-radius: 25px;
-}
-
-.text-blue{
-  color:#262737;
 }
 
 .accident p {

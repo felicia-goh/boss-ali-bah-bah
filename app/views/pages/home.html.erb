@@ -1,48 +1,42 @@
 <div class="container ">
-  <% if @workday_checkedin.nil? %>
-  <div class="d-flex parent">
-    <div class="card-product mb-3 mt-3 round square">
-      <div class="square border-dark round">
-        <h5 class= "text-center text-white border-dark square" style="background-color:#262737"><%=  (Date::MONTHNAMES[Date.today.mon]).capitalize%></h5>
-        <h1 class= "text-center" style="line-height: 80px"><%=  Date.today.day%></h1>
+  <div class="d-flex">
+    <div class="badge-parent my-3">
+      <div class="square-date">
+        <h5><%= (Date::MONTHNAMES[Date.today.mon]).capitalize %></h5>
+        <h1><%= Date.today.day %></h1>
+      </div>
+      <% if @workday_checkedin.nil? %>
+        <span class="badge badge-danger badge-customize">!</span>
+      <% end %>
+    </div>
+      <div class="d-flex align-items-center justify-content-center flex-grow-1 my-3">
+        <div class="text-center mx-3">
+          <% if @workday_checkedin.nil? %>
+            <h5>Good evening, <%= current_user.name %>!<br>Please check in! 👇</h5>
+          <% else %>
+            <strong>
+              <p class="checkin-success">
+                <% if @workday_checkedin.on_mc %>
+                  Get well soon 🙏
+                <% elsif @workday_checkedin.on_rest %>
+                  Enjoy your rest day 🤗
+                <% else %>
+                  You've checked in today! 👍
+                <% end %>
+              </p>
+              <i class="fas fa-info-circle text-primary"></i>
+              <%= link_to organisation_path(anchor: "article#{@article.first.id}"), data: { turbo: false }, class: 'text-primary' do %>
+                <%= @article.first.title %>
+              <% end %>
+            </strong>
+          <% end %>
+        </div>
       </div>
     </div>
-
-    <div class="child" style="float:left;">
-      <span class="badge badge-danger badge-customize">!</span>
-      <h5>Good evening, <%= current_user.name %>!<br>Please check in! 👇</h5>
-    </div>
-
-  </div>
-  <strong><%= link_to 'Check in today', new_workday_path,class: "text-white btn btn-warning mb-3 btn-block", style:"box-shadow: 0 0 15px rgba(0,0,0,0.2);
-",data: { turbo: 'false' } %></strong>
-  <% else %>
-  <div class="card-product mb-3 mt-3 ml-1 round square left">
-    <div class="square border-dark round">
-      <h5 class= "text-center text-white border-dark square" style="background-color:#262737"><%=  (Date::MONTHNAMES[Date.today.mon]).capitalize%></h5>
-      <h1 class= "text-center" style="line-height: 80px"><%=  Date.today.day%></h1>
-    </div>
-  </div>
-  <div class="mt-3 text-blue text-center container">
-    <% if @workday_checkedin.on_mc %>
-    <p class="move-down" style="color:#2ab59b">Get well soon 🙏</p>
-    <strong><i class="fas fa-info-circle"></i>
-      <%= link_to organisation_path(anchor: "article#{@article.first.id}"), data: { turbo: false } do %><%= @article.first.title %><% end %>
-    </strong>
-    <% elsif @workday_checkedin.on_rest %>
-    <p class="move-down" style="color:#2ab59b">Enjoy your rest day 🤗 </p>
-    <strong><i class="fas fa-info-circle"></i>
-      <%= link_to organisation_path(anchor: "article#{@article.first.id}"), data: { turbo: false } do %><%= @article.first.title %><% end %>
-      <!-- <a href="/organisation#article<%= @article.first.id %>"><%= @article.first.title %></a> -->
-    </strong>
-    <% else %>
-    <strong><p class="move-down" style="color:#2ab59b">You've checked in today! 👍 </p></strong>
-    <strong><i class="fas fa-info-circle"></i>
-      <%= link_to organisation_path(anchor: "article#{@article.first.id}"), data: { turbo: false } do %><%= @article.first.title %><% end %>
-    </strong>
+    <% if @workday_checkedin.nil? %>
+      <%= link_to 'Check in today', new_workday_path, class: "btn btn-block btn-warning text-white mb-3", style:"box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  ", data: { turbo: 'false' } %>
     <% end %>
-    <% end %>
-
   </div>
 
   <div id="carouselHome" class="carousel slide mb-3" data-ride="carousel">
@@ -64,7 +58,7 @@
      <a href="https://www.youtube.com/watch?v=W9NqBtOaeUs" target="_blank">
       <%= image_tag "Bengali-image.png" %>
       <div class="carousel-caption">
-        <p>Get your questions about policy changes during COVID-19 answered (Bengali only)</p>
+        <p>Learn about policy changes during COVID-19 (Bengali only)</p>
       </div>
     </a>
   </div>

@@ -2,3 +2,49 @@
 .small-link {
   font-size: 14px;
 }
+
+.square-date {
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+
+  h5 {
+    background-color: $blue;
+    color: white;
+    line-height: 30px;
+  }
+
+  h1 {
+    line-height: 74px;
+  }
+}
+
+.round {
+  border-radius: 25px;
+}
+
+.badge-parent {
+  // wraps around .square-date
+  // unable to put position: relative on .square-date
+  // because overflow:hidden; is needed for the rounded borders
+  position: relative;
+  height: 120px;
+  width: 120px;
+}
+
+.badge-customize {
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: white;
+  left:-4px;
+  top:-4px;
+}
+
+.checkin-success {
+  color:#2ab59b;
+}
