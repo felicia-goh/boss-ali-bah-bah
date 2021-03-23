@@ -1,10 +1,11 @@
-$carousel-height: 55vh;
+$carousel-height-landing: 55vh;
+$carousel-height-home: 200px;
 
 #carouselLanding {
   background-color: white;
   margin: 0 auto;
   width: 80vw;
-  height: $carousel-height;
+  height: $carousel-height-landing;
   position: relative;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
@@ -34,8 +35,7 @@ $carousel-height: 55vh;
 
   .carousel-inner {
     width: 100%;
-    height: $carousel-height;
-
+    height: $carousel-height-landing;
 
     .carousel-item {
       max-height: 100%;
@@ -51,13 +51,34 @@ $carousel-height: 55vh;
         position: absolute;
         top: 0px;
         color: black;
-        height: $carousel-height;
+        height: $carousel-height-landing;
       }
     }
   }
 }
 
-#logo {
-  display: flex;
-  margin: 20px auto;
+#carouselHome {
+  background-color: #cccccc;
+  .carousel-inner{
+    width: 100%;
+    height: $carousel-height-home;
+  }
+
+  .carousel-item {
+    height: $carousel-height-home;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-height: $carousel-height-home;
+      filter: brightness(80%);
+    }
+
+    .carousel-caption {
+      max-width: 300px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+  }
 }
+

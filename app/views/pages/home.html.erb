@@ -45,16 +45,16 @@
 
   </div>
 
-  <div id="carouselExampleIndicators" class="carousel slide mb-3" data-ride="carousel">
+  <div id="carouselHome" class="carousel slide mb-3" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselHome" data-slide-to="1"></li>
+      <li data-target="#carouselHome" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner" style=" width:100%; height: 200px !important;">
+    <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="https://www.sgmigrant.com" target="_blank">
-          <%= image_tag "case.png", class: "d-block w-100 caro-image" %>
+          <%= image_tag "case.png" %>
          <div class="carousel-caption">
           <p>One stop portal for COVID-19, mental wellness and recreation</p>
         </div>
@@ -62,29 +62,29 @@
     </div>
     <div class="carousel-item">
      <a href="https://www.youtube.com/watch?v=W9NqBtOaeUs" target="_blank">
-      <%= image_tag "Bengali-image.png", class: "d-block w-100 caro-image" %>
+      <%= image_tag "Bengali-image.png" %>
       <div class="carousel-caption">
-        <p>Get your questions about policy changes during COVID-19 answered (bengali only)</p>
+        <p>Get your questions about policy changes during COVID-19 answered (Bengali only)</p>
       </div>
     </a>
   </div>
      <div class="carousel-item">
       <a href="https://www.globalmigrantfestival.com/sgmigrantpoetry" target="_blank">
-        <%= image_tag "migrant-worker-poetry.png", class: "d-block w-100 caro-image" %>
+        <%= image_tag "migrant-worker-poetry.png" %>
       </a>
     </div>
 </div>
-<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
   <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
   <span class="carousel-control-next-icon" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
 </div>
 </div>
-<div style="background-color:#262737" class="py-4 mb-5">
+<div class="bg-primary py-4 mb-5">
   <div class="container">
     <%= link_to new_workday_path do %>
       <div class="card-product-home my-3 p-3 rounded">
@@ -120,7 +120,7 @@
     <% end %>
     <br>
     <% if user_signed_in? %>
-    <%= button_to "More options >", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary text-white", style: "font-size:15px; margin-left:105px;",data: { turbo: false }  %>
+      <%= button_to "More options >", destroy_user_session_path, method: :delete, class: "btn btn-block btn-outline-primary text-white small-link", data: { turbo: false }  %>
     <% end %>
   </div>
 </div>
