@@ -1,0 +1,27 @@
+.progress-steps-bar {
+  margin-top: $spacer * 3; // mt-5 bootstrap class
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5px;
+  background-color: $secondary;
+}
+
+.progress-steps-circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+
+  &.active {
+    background-color: $green;
+    color: white;
+  }
+
+  &.inactive {
+    background-color: $dark;
+    color: $secondary;
+  }
+}
