@@ -1,0 +1,66 @@
+.simple-calendar table {
+  background-color:white;
+}
+
+.simple-calendar th {
+  vertical-align:middle;
+  text-align:center;
+}
+
+.simple-calendar td {
+  padding: 0 !important;
+  vertical-align:middle;
+  text-align:center;
+  min-width: 2.5rem;
+  height: 3rem !important;
+}
+
+.simple-calendar .calendar-heading {
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+}
+
+.simple-calendar .today {
+  background-color: transparent !important;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.calendar-highlight {
+  height: 3rem;
+  min-width: 2.5rem;
+  line-height: 1rem;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.calendar-highlight-small {
+  height: 1rem;
+  width: 1rem;
+  line-height: 1rem;
+  opacity: 70%;
+}
+
+.highlight-green {
+  background-color: rgba(27, 187, 164, 0.4);
+}
+
+.highlight-yellow {
+  background-color: rgba(254, 214, 72, 0.4);
+}
+
+.highlight-red {
+  background-color: rgba(241, 98, 81, 0.4);
+}
+
+.container-white-salary {
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

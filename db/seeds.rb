@@ -1,16 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Article.destroy_all;
-
-Article.create!(title:"How much can I expect to be paid each month?" ,content:"You will be paid the “BASIC MONTHLY SALARY” in your IPA if you work 44 hours a week.
-  Your “FIXED MONTHLY SALARY” is higher because that includes money your boss uses for your food and housing.
-  If you work more than 44 hours a week or on your rest days, your hourly pay will be calculated based on your “BASIC MONTHLY SALARY”.")
+Organisation.destroy_all;
 
 Article.create!(title:"How is my hourly pay calculated?",content:"Hourly pay = (12 x basic monthly salary) divided by (52 weeks in a year x 44 hours a week)
   You can find your basic monthly salary in your IPA.")

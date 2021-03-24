@@ -8,19 +8,19 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <%= image_tag "landing-contract.svg" %>
+        <%= image_tag "landing-contract.svg", height: 230, width: 230, crop: :fill %>
         <div class="carousel-caption">
           <h5>Learn about your employment rights</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <%= image_tag "landing-documents.svg" %>
+        <%= image_tag "landing-documents.svg", height: 230, width: 230, crop: :fill %>
         <div class="carousel-caption">
           <h5>Protect yourself with simple records</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <%= image_tag "landing-sign.svg" %>
+        <%= image_tag "landing-sign.svg", height: 230, width: 230, crop: :fill %>
         <div class="carousel-caption">
           <h5>Seek help easily</h5>
         </div>
@@ -35,6 +35,6 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-block btn-blue mt-4 text-white', data: { turbo: false }  %>
-  <%= link_to "Log In", new_user_session_path, class: 'btn btn-block btn-outline-primary mt-2 mb-4 text-primary', data: { turbo: false }  %>
+  <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-block btn-primary btn-80 mt-4 text-white', data: { turbo: false }  %>
+  <%= link_to "Log In", new_user_session_path, class: 'btn btn-block btn-outline-primary btn-80 mt-2 mb-4', data: { turbo: false }  %>
 </div>

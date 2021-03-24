@@ -6,7 +6,7 @@
   <% default_month = params[:month].to_i %>
   <% default_year = params[:year].to_i %>
 <% else %>
-  <% default_month = Time.now.month %>
+  <% default_month = Time.now.month - 1 %>
   <% default_year = Time.now.year %>
 <% end %>
 

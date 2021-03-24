@@ -1,20 +1,14 @@
 <%= turbo_frame_tag "accident" do %>
-<div class="bg-secondary mt-3 mb-5 d-flex w-100 justify-content-between align-items-center" style="height:5px">
-  <div class="btn-green rounded-circle text-center" style="height: 50px; width: 50px; line-height: 50px">
-    <p class="align-middle text-white">1</p>
+  <div class="progress-steps-bar mb-5">
+    <div class="progress-steps-circle active"><p>1</p></div>
+    <div class="progress-steps-circle active"><p>2</p></div>
+    <div class="progress-steps-circle active"><p>3</p></div>
   </div>
-  <div class="btn-green rounded-circle text-center" style="height: 50px; width: 50px; line-height: 50px">
-    <p class="text-white">2</p>
-  </div>
-  <div class="btn-green rounded-circle text-center" style="height: 50px; width: 50px; line-height: 50px">
-    <p class="text-white">3</p>
-  </div>
-</div>
-<%= simple_form_for @accident do |f| %>
-<%= f.input :paid_by_employer, as: :select, label: 'Did boss pay?' %>
-<%= f.input :mc_days %>
-<%= f.input :photos, as: :file, input_html: { multiple: true } %>
-<%= f.submit 'Finish', class: 'btn btn-primary btn-block mb-3' %>
-<% end %>
-<%= link_to "Back", edit_accident_path(@accident), class: 'btn btn-block btn-warning' %>
+  <%= simple_form_for @accident do |f| %>
+    <%= f.input :paid_by_employer, as: :radio_buttons, label: 'Did boss pay?' %>
+    <%= f.input :mc_days, label: 'MC days' %>
+    <%= f.input :photos, label: 'Photos of medical bills and/or bills', as: :file, input_html: { multiple: true } %>
+    <%= f.submit 'Finish', class: 'btn btn-primary btn-block mb-3' %>
+  <% end %>
+  <%= link_to "Back", edit_accident_path(@accident), class: 'btn btn-block btn-outline-primary' %>
 <% end %>

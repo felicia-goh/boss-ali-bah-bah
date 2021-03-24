@@ -4,10 +4,20 @@
 
 <head>
   <title>boss ali-bah-bah?</title>
+  <meta name="description" content="The app for migrant brothers in Singapore to learn about their employment rights, keep simple records and seek help easily.">
+
+  <!-- Facebook Open Graph data -->
+  <meta property="og:title" content="boss ali-bah-bah?" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://boss-ali-bah-bah.herokuapp.com" />
+  <meta property="og:description" content="The app for migrant brothers in Singapore to learn about their employment rights, keep simple records and seek help easily." />
+  <meta property="og:site_name" content="boss ali-bah-bah?" />
+
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
   <%= stylesheet_pack_tag 'application'%>
 
@@ -22,7 +32,7 @@
 </head>
 
 <body>
-  <div class="my-0" style="position:relative;">
+  <div class="my-0 position-relative">
     <%= yield %>
     <% if user_signed_in? %>
       <%= render 'shared/navbar' %>
